@@ -1,7 +1,54 @@
-.title{
-    font-size: 24px;
-}
-
-.divider{
-    color: #fff;
-}
+.headerContainer {
+    display: flex; /* 使用 Flexbox 排版 */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平置中 */
+    height: 100vh; /* 高度佔滿整個視窗 */
+    padding: 1rem 0; /* 上下內邊距 */
+    background-color: #282c34; /* 背景顏色 */
+    transition: all 0.3s ease; /* 讓所有屬性都有平滑過渡效果 */
+    width: 60px; /* 初始寬度 */
+  }
+  
+  .expand {
+    width: 200px; /* 展開時的寬度 */
+  }
+  
+  .shrink {
+    width: 60px; /* 縮合時的寬度 */
+  }
+  
+  .logoBox {
+    display: flex; /* 使用 Flexbox 排版 */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平置中 */
+    justify-content: center; /* 垂直置中 */
+    margin-bottom: 1rem; /* 下邊距 */
+    transition: all 0.3s ease; /* 讓所有屬性都有平滑過渡效果 */
+  }
+  
+  .logo {
+    width: 40px; /* 縮合時的 Logo 大小 */
+    transition: width 0.3s ease; /* Logo 寬度過渡效果 */
+  }
+  
+  .title {
+    font-size: 16px; /* 縮合時的標題大小 */
+  }
+  
+  .expand .logo {
+    width: 80px; /* 展開時的 Logo 大小 */
+  }
+  
+  .expand .title {
+    font-size: 24px; /* 展開時的標題大小 */
+  }
+  
+  .divider {
+    border-color: #ffffff; /* 分隔線顏色 */
+    opacity: 0; /* 縮合時隱藏分隔線 */
+    transition: opacity 0.3s ease; /* 分隔線顯示過渡效果 */
+  }
+  
+  .expand .divider {
+    opacity: 1; /* 展開時顯示分隔線 */
+  }
