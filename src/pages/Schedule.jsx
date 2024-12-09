@@ -1,11 +1,13 @@
 import Header from "../components/Header/Header";
+import ScheduleList from "../components/ScheduleList/ScheduleList";
+import styles from "./schedule.module.css";
 
-const Schedule =() => {
-    return(
-        <div>
-            <Header/>
-            <p>Schedule頁面</p>
-        </div>
-    );
-}
-export default Schedule
+const Schedule = () => {
+  return (
+    <div className={styles.container}>
+      <Header />
+      <ScheduleList />
+    </div>
+  );
+};
+export default Schedule;
