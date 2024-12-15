@@ -1,73 +1,66 @@
 .navContainer {
-    display: flex; /* 使用 Flexbox 排版 */
-    flex-direction: column; /* 垂直排列 */
-    align-items: center; /* 水平置中 */
-    width: 60px; /* 初始寬度 */
-    overflow: hidden; /* 隱藏溢出的內容 */
-    transition: width 0.3s ease; /* 寬度過渡效果 */
-
-  }
-  
-.navContainer:hover {
-      width: 200px; /* 滑鼠懸停時展開的寬度 */
-    } 
-  
-  .navbox {
-    display: flex; /* 使用 Flexbox 排版 */
-    align-items: center; /* 垂直置中 */
-    justify-content: center; /* 水平置中 */
-    width: 100%; /* 佔滿整個寬度 */
-    padding: 0.5rem 1rem; /* 內邊距 */
-    border-radius: 8px; /* 邊角圓弧 */
-    transition: background-color 0.3s ease; /* 背景顏色過渡效果 */
-    margin: 0.5rem 0; /* 上下邊距 */
-  }
-  
-  .navbox:hover {
-    background-color: rgba(188, 196, 249, 0.5); /* 懸停時背景顏色 */
-
-  }
-  .navbox:active{
-    background-color: rgba(188, 196, 249, 0.5); 
-
-  }
-  
-  /* Icon 的樣式 */
-  .icon {
-    display: flex;
-    justify-content: center; /* 水平置中 */
-    align-items: center; /* 垂直置中 */
-    width: 100%; /* 確保寬度填滿 */
-  }
-  
-  /* Title 的樣式 */
-  .title {
-    font-size: larger; /* 標題字型大小 */
-    color: aliceblue; /* 標題顏色 */
-    white-space: nowrap; /* 不換行 */
-  }
-  
-  .navbox .title {
-    display: none; /* 縮合時隱藏標題 */
-  }
-  
-  .navContainer:hover .navbox .title {
-    display: block; /* 懸停時顯示標題 */
-  }
-
-
-
-  .navItme{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
-
+  display: flex; /* 使用 Flexbox 排版 */
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平置中 */
+  width: 60px; /* 初始寬度 */
+  overflow: hidden; /* 隱藏溢出的內容 */
+  transition: width 0.3s ease; /* 寬度過渡效果 */
 }
-  
+
+.navContainer:hover {
+  width: 200px; /* 滑鼠懸停時展開的寬度 */
+}
+
+.navbox {
+  display: flex; /* 使用 Flexbox 排版 */
+  align-items: center; /* 垂直置中 */
+  justify-content: center; /* 水平置中 */
+  width: 100%; /* 佔滿整個寬度 */
+  padding: 0.5rem 1rem; /* 內邊距 */
+  border-radius: 8px; /* 邊角圓弧 */
+  transition: background-color 0.3s ease; /* 背景顏色過渡效果 */
+  margin: 0.5rem 0; /* 上下邊距 */
+}
+
+.navbox:hover {
+  background-color: rgba(188, 196, 249, 0.5); /* 懸停時背景顏色 */
+}
+.navbox:active {
+  background-color: rgba(188, 196, 249, 0.5);
+}
+
+/* Icon 的樣式 */
+.icon {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  width: 100%; /* 確保寬度填滿 */
+}
+
+/* Title 的樣式 */
+.title {
+  font-size: larger; /* 標題字型大小 */
+  color: aliceblue; /* 標題顏色 */
+  white-space: nowrap; /* 不換行 */
+}
+
+.navbox .title {
+  display: none; /* 縮合時隱藏標題 */
+}
+
+.navContainer:hover .navbox .title {
+  display: block; /* 懸停時顯示標題 */
+}
+
+.navItme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 /**/
 .navbox {
-  display: flex; 
+  display: flex;
   gap: 1rem;
   margin: 0.5rem 1rem;
 }

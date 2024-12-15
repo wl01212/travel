@@ -2,10 +2,10 @@ import { Row, Col, Button } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const PlaceDetail = ({ place }) => {
-    const navigate = useNavigate();
-    const handleBack=()=>{
-        navigate("/")
-    };
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate("/");
+  };
   return (
     <>
       <Row>
@@ -34,5 +34,3 @@ const PlaceDetail = ({ place }) => {
 };
 
 export default PlaceDetail;
-
-
