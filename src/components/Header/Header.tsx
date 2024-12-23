@@ -1,8 +1,8 @@
 import styles from "./header.module.css";
 import logo from "../../assets/travel.png";
 import { Divider } from "antd";
-import NavBar from "../Navbar/Navbar";
 import { useState } from "react";
+import NavBar from "../Navbar/Navbar";
 //import ScheduleList from "../../components/ScheduleList/ScheduleList";
 //import FavoriteList from"../../components/FavoriteList/FavoriteList"
 //import SiteList from "../../components/Site/SiteList";

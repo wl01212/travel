@@ -11,10 +11,10 @@ const Home = () => {
     <div className={styles.container}>
       <Row>
         <Col sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 4 }}>
-          <Header />{" "}
+          <Header />
         </Col>
         <Col sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 20 }}>
-          <PlaceList />{" "}
+          <PlaceList />
         </Col>
       </Row>
     </div>

@@ -6,7 +6,12 @@ import {
 import { NavLink } from "react-router-dom";
 import styles from "./navbar.module.css";
 
-const NavBar = ({ isShrink }) => {
+// 定义 Props 类型
+interface NavBarProps {
+  isShrink: boolean; // isShrink 是一个布尔值
+}
+
+const NavBar = ({ isShrink }: NavBarProps) => {
   return (
     <div className={styles.navContainer}>
       <div className={styles.navbox}>
@@ -52,4 +57,5 @@ const NavBar = ({ isShrink }) => {
     </div>
   );
 };
+
 export default NavBar;

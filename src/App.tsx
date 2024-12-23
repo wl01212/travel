@@ -1,27 +1,29 @@
-import { useState } from "react";
+//import { useState } from 'react'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
 import "./App.css";
-import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Place from "./pages/Place";
+import Home from "./pages/Home";
+import Favorite from "./pages/Favorite";
+import Schedule from "./pages/Schedule";
+import NavigationButton from './components/NavigationButton/NavigationButton';
+// import MapPage from './pages/MapPage';
+// import OtherPage from './pages/OtherPage';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-
-      {count > 0 ? <p>The count is greater then 0</p> : null}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="places/id/:placeId" element={<Place />} />
+        <Route path="/favorite" element={<Favorite />} />
+        <Route path="/schedule" element={<Schedule />} />
+        {/* <Route path="/map" element={<MapPage />} /> */}
+        {/* <Route path="/" element={<OtherPage />} /> */}
+      </Routes>
+      <NavigationButton /> 
+    </BrowserRouter>
   );
 }
 
