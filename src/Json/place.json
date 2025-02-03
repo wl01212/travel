@@ -1,30 +1,34 @@
 [
-    {
-      "name":"大阪",
-      "image":"/japan.jpg",
-      "description": "A large urban park.1",
-      "nation":"日本",
-      "id":"1"
-    },
-    {
-        "name":"首爾",
-        "image":"/japan.jpg",
-        "description": "A large urban park.2",
-        "nation":"日本",
-        "id":"2"
-      },
-      {
-        "name":"釜山",
-        "image":"/japan.jpg",
-        "description": "A large urban park.3",
-        "nation":"日本",
-        "id":"3"
-      },
-      {
-        "name":"台北",
-        "image":"/japan.jpg",
-        "description": "A large urban park.4",
-        "nation":"日本",
-        "id":"4"
-      }
+  {
+    "name": "大阪",
+    "image": "/japan.jpg",
+    "description": "A large urban park.1",
+    "nation": "日本",
+    "id": "1",
+    "position": [34.6891732141432, 135.52517614090416]
+  },
+  {
+    "name": "首爾",
+    "image": "/japan.jpg",
+    "description": "A large urban park.2",
+    "nation": "日本",
+    "id": "2",
+    "position": [34.6891732141432, 135.52517614090416]
+  },
+  {
+    "name": "釜山",
+    "image": "/japan.jpg",
+    "description": "A large urban park.3",
+    "nation": "日本",
+    "id": "3",
+    "position": [34.6891732141432, 135.52517614090416]
+  },
+  {
+    "name": "台北",
+    "image": "/japan.jpg",
+    "description": "A large urban park.4",
+    "nation": "日本",
+    "id": "4",
+    "position": [34.6891732141432, 135.52517614090416]
+  }
 ]
