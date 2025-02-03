@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import { Row, Col } from "antd";
 import styles from "./layout.module.css";
-
+import SearchBar from "../components/SearchBar";
 const Layout = () => {
   // It returns an object with information about the current URL and can also be used to receive the state from a <Link/>.
   return (
@@ -22,6 +22,7 @@ const Layout = () => {
           lg={{ span: 20 }} /* 擴展內容區域 */
           className={styles.col_16}
         >
+          <SearchBar />
           <Outlet />
         </Col>
       </Row>
