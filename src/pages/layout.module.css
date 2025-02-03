@@ -15,21 +15,6 @@
   padding: 0; /* 確保沒有額外的填充 */
 }
 
-.mapCol {
-  flex: 1;
-  display: flex;
-  margin: 0; /* 確保沒有額外的邊距 */
-  padding: 0; /* 確保沒有額外的填充 */
-}
-
-.map {
-  flex: 1;
-  height: 100%;
-  width: 100%;
-  margin: 0; /* 確保沒有額外的邊距 */
-  padding: 0; /* 確保沒有額外的填充 */
-}
-
 @media (max-width: 995px) {
   .mapContainer {
     height: 100%;
