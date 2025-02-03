@@ -5,11 +5,11 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Place from "./pages/Place";
 import Home from "./pages/Home";
-import Favorite from "./pages/Favorite";
+// import Favorite from "./pages/Favorite";
 import Schedule from "./pages/Schedule";
-import NavigationButton from './components/NavigationButton/NavigationButton';
-import MapPage from './pages/MapPage';
-import OtherPage from './pages/OtherPage';
+import NavigationButton from "./components/NavigationButton/NavigationButton";
+import MapPage from "./pages/MapPage";
+// import OtherPage from "./pages/OtherPage";
 
 function App() {
   return (
@@ -17,12 +17,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="places/id/:placeId" element={<Place />} />
-        <Route path="/favorite" element={<Favorite />} />
+        {/* <Route path="/favorite" element={<Favorite />} /> */}
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/map" element={<MapPage />} />
-        <Route path="/" element={<OtherPage />} />
+        {/* <Route path="/" element={<OtherPage />} /> */}
       </Routes>
-      <NavigationButton /> 
+      <NavigationButton />
     </BrowserRouter>
   );
 }
