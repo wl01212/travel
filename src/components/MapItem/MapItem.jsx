@@ -6,6 +6,7 @@ import landmarks from "../../json/place.json";
 import { HeartFilled, HeartOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import { useState } from "react";
+import AddToFavorite from "../AddToFavorite";
 
 export default function MapItem() {
   const center = [36.23541690015412, 137.97220383903155];
@@ -43,6 +44,7 @@ export default function MapItem() {
                     >
                       {click === false ? <HeartOutlined /> : <HeartFilled />}
                     </div>
+                    <AddToFavorite landmark={landmark} />
                     <Button type="primary">加入行程</Button>
                   </div>
                 </Popup>
