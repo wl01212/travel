@@ -1,4 +1,3 @@
-import Header from "../components/Header/Header";
 import PlaceList from "../components/PlaceList/PlaceList";
 //import ScheduleList from "../components/ScheduleList/ScheduleList";
 //import FavoriteList from"../components/FavoriteList/FavoriteList"
@@ -10,9 +9,6 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <Row>
-        <Col sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 4 }}>
-          <Header />{" "}
-        </Col>
         <Col sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 20 }}>
           <PlaceList />{" "}
         </Col>
