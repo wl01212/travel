@@ -10,6 +10,7 @@ export default function FavoriteItem({place}) {
     const handleRemove =() =>{
       dispatch(favoriteActions.removeFavorite(place));
     }
+    console.log("placename",place.name);
     return (
       <>
         <div className={styles.favoritebox}>

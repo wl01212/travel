@@ -6,11 +6,12 @@ import { HeartFilled, HeartOutlined } from '@ant-design/icons';
 import { favoriteActions } from "/src/store/favorite";
 import styles from './addToFavorite.module.css';
 
-const { addFavorite, removeFavorite } = favoriteActions
 
 export default function AddToFavorite({ landmark }) {
+    const { addFavorite, removeFavorite } = favoriteActions
+    const favorites = useSelector((state) => state.favorite);
+    console.log(favorites)
     const [isFavorite, setIsFavorite] = useState(false);
-    const favorites = useSelector((state) => state.favorites);
     const dispatch = useDispatch();
     useEffect(() => {
         const isFav = favorites?.some(fav => fav.id === landmark.id);

@@ -1,19 +1,12 @@
 import styles from "./map.module.css";
-import { Row, Col } from "antd";
+import { Row, Col, Button } from "antd";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // 引入 Leaflet 的樣式
 import landmarks from "../../json/place.json";
-import { HeartFilled, HeartOutlined } from "@ant-design/icons";
-import { Button } from "antd";
-import { useState } from "react";
 import AddToFavorite from "../AddToFavorite";
 
 export default function MapItem() {
   const center = [36.23541690015412, 137.97220383903155];
-  const [click, setClick] = useState(false);
-  const ButtonClick = () => {
-    setClick(!click);
-  };
   return (
     <div className={styles.fullScreen}>
       <Row className={styles.mapContainer}>
@@ -35,15 +28,6 @@ export default function MapItem() {
                   <div className={styles.landmarkName}>{landmark.name}</div>
                   <img src={landmark.image} className={styles.img} />
                   <div className={styles.buttonContainer}>
-                    <div
-                      className={styles.buttonHeart}
-                      onClick={(e) => {
-                        e.stopPropagation(); // 阻止點擊事件冒泡
-                        ButtonClick();
-                      }}
-                    >
-                      {click === false ? <HeartOutlined /> : <HeartFilled />}
-                    </div>
                     <AddToFavorite landmark={landmark} />
                     <Button type="primary">加入行程</Button>
                   </div>

@@ -2,33 +2,33 @@
   {
     "name": "大阪",
     "image": "/japan.jpg",
-    "description": "A large urban park.1",
+    "description": "A large urban park.",
     "nation": "日本",
     "id": "1",
-    "position": [34.6891732141432, 135.52517614090416]
+    "position": [34.6937, 135.5023] 
   },
   {
-    "name": "首爾",
-    "image": "/japan.jpg",
-    "description": "A large urban park.2",
-    "nation": "日本",
+    "name": "首尔",
+    "image": "/seoul.png",
+    "description": "The capital city of South Korea.",
+    "nation": "韩国",
     "id": "2",
-    "position": [34.6891732141432, 135.52517614090416]
+    "position": [37.5665, 126.9780] 
   },
   {
     "name": "釜山",
-    "image": "/japan.jpg",
-    "description": "A large urban park.3",
-    "nation": "日本",
+    "image": "/busan.png",
+    "description": "A large port city in South Korea.",
+    "nation": "韩国",
     "id": "3",
-    "position": [34.6891732141432, 135.52517614090416]
+    "position": [35.1796, 129.0756] 
   },
   {
     "name": "台北",
-    "image": "/japan.jpg",
-    "description": "A large urban park.4",
-    "nation": "日本",
+    "image": "/taipei.png",
+    "description": "The capital city of Taiwan.",
+    "nation": "台湾",
     "id": "4",
-    "position": [34.6891732141432, 135.52517614090416]
+    "position": [25.0330, 121.5654] 
   }
 ]

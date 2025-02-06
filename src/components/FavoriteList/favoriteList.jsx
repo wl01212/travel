@@ -4,7 +4,8 @@ import { Row, Col } from "antd";
 import FavoriteItem from "../FavoriteItem";
 
 export default function FavoriteList() {
-  const favorite = useSelector((state) => state.favorites)||[];
+  const favorite = useSelector((state) => state.favorite)||[];
+  
   return (
     <>
       <div className={styles.containerbox}>
