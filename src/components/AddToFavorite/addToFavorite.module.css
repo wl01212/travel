@@ -1,0 +1,23 @@
+/* addToFavorite.module.css */
+
+/* 容器样式 */
+.buttonHeart {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ff4d4f; /* 默认心形图标颜色 */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* 悬停效果 */
+  .buttonHeart:hover {
+    transform: scale(1.2); /* 放大效果 */
+  }
+  
+  /* 已收藏状态的心形图标颜色 */
+  .buttonHeart .anticon {
+    color: #ff4d4f;
+  }
+  
