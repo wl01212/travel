@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Modal, Form, Input, DatePicker } from "antd";
+import { Modal, Form, Input, DatePicker, notification } from "antd";
+import { useDispatch } from "react-redux";
+import { addScheduleItems } from "/src/store/schedule";
 
 export default function ScheduleModal({ isOpen, toggleModal }) {
   const { RangePicker } = DatePicker;
   const [time, setTime] = useState("");
   const [form] = Form.useForm();
-
+  const dispatch = useDispatch();
   const timeChange = (date, dateString) => {
     setTime(dateString);
   };
@@ -14,8 +16,19 @@ export default function ScheduleModal({ isOpen, toggleModal }) {
     form
       .validateFields()
       .then((values) => {
+        dispatch(
+          addScheduleItems({
+            scheduleName: values["schedule name:"],
+            time: time,
+          })
+        );
         console.log("Form values:", values);
         console.log("Form time:", time);
+        notification.success({
+          message: "已新增行程!",
+          description: `已添加 ${values["schedule name:"]} 到行程中`,
+          placement: "top",
+        });
         toggleModal();
         form.resetFields();
       })
