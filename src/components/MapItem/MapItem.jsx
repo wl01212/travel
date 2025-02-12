@@ -1,10 +1,11 @@
 import styles from "./map.module.css";
-import { Row, Col, Button } from "antd";
+import { Row, Col } from "antd";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // 引入 Leaflet 的樣式
 import landmarks from "../../json/place.json";
 import AddToFavorite from "../AddToFavorite";
 import CreateScheduleButton from "../ScheduleButton/CreateScheduleButton";
+import AddToSchedule from "../AddToSchedule";
 
 export default function MapItem() {
   const center = [36.23541690015412, 137.97220383903155];
@@ -30,7 +31,7 @@ export default function MapItem() {
                   <img src={landmark.image} className={styles.img} />
                   <div className={styles.buttonContainer}>
                     <AddToFavorite landmark={landmark} />
-                    <Button type="primary">加入行程</Button>
+                    <AddToSchedule landmark={landmark} />
                   </div>
                 </Popup>
               </Marker>
