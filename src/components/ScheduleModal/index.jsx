@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Modal, Form, Input, DatePicker, notification } from "antd";
 import { useDispatch } from "react-redux";
 import { addScheduleItems } from "/src/store/schedule";
+import { v4 } from "uuid";
 
 export default function ScheduleModal({ isOpen, toggleModal }) {
   const { RangePicker } = DatePicker;
@@ -18,12 +19,14 @@ export default function ScheduleModal({ isOpen, toggleModal }) {
       .then((values) => {
         dispatch(
           addScheduleItems({
+            scheduleId: v4(),
             scheduleName: values["schedule name:"],
             time: time,
           })
         );
         console.log("Form values:", values);
         console.log("Form time:", time);
+        console.log("Action dispatched");
         notification.success({
           message: "已新增行程!",
           description: `已添加 ${values["schedule name:"]} 到行程中`,
@@ -35,6 +38,7 @@ export default function ScheduleModal({ isOpen, toggleModal }) {
       .catch((info) => {
         console.log("Validate Failed:", info);
         console.log("Failed time:", time);
+        console.log("Validate Failed:", info);
       });
   };
 
