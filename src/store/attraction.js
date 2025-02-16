@@ -68,6 +68,15 @@ const scheduleSlice = createSlice({
         state.schedules[scheduleIndex].landmarks = filteredLandmarks;
       }
     },
+    updateLandmarkOrder: (state, action) => {
+      const { scheduleName, newLandmarks } = action.payload;
+      const scheduleIndex = state.schedules.findIndex(
+        (schedule) => schedule.scheduleName === scheduleName
+      );
+      if (scheduleIndex >= 0) {
+        state.schedules[scheduleIndex].landmarks = newLandmarks;
+      }
+    },
   },
 });
 
