@@ -2,7 +2,7 @@ import styles from "./map.module.css";
 import { Row, Col } from "antd";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // 引入 Leaflet 的樣式
-import landmarks from "../../json/place.json";
+import landmarks from "../../data/place.json";
 import AddToFavorite from "../Buttons/AddToFavorite";
 import CreateScheduleButton from "../ScheduleButton/CreateScheduleButton";
 import AddToSchedule from "../Buttons/AddToSchedule";

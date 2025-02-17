@@ -1,6 +1,6 @@
 import PlaceDetail from "../components/PlaceDetail/PlaceDetail";
 import { useParams } from "react-router-dom";
-import places from "../json/place.json";
+import places from "../data/place.json";
 
 const Place = () => {
   const { placeId } = useParams();
