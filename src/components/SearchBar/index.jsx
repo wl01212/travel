@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Row, Col, AutoComplete, Input } from "antd";
-import landmarks from "../../json/place.json";
+import landmarks from "../../data/place.json";
 import styles from "./searchBar.module.css";
 import { useState } from "react";
 export default function SearchBar() {

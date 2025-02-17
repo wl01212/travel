@@ -1,5 +1,5 @@
 import PlaceItem from "../PlaceItem/PlaceItem";
-import places from "../../json/place.json";
+import places from "../../data/place.json";
 import styles from "./place.module.css";
 import { Row, Col } from "antd";
 
@@ -26,10 +26,12 @@ const PlaceList = () => {
         <Row gutter={[24, 32]} className={styles.contabox}>
           {places.map((place) => {
             return (
-              <Col key={place.id}
+              <Col
+                key={place.id}
                 sm={{ span: 24 }}
                 md={{ span: 12 }}
-                lg={{ span: 6 }}>
+                lg={{ span: 6 }}
+              >
                 <PlaceItem place={place} />
               </Col>
             );
