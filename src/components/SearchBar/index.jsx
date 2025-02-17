@@ -8,7 +8,7 @@ export default function SearchBar() {
   const navigate = useNavigate();
 
   const onSelect = (value, option) => {
-    navigate(`/places/id/${option.id}`);
+    navigate(`/places/${option.id}`);
   };
 
   const handleSearch = (value) => {
@@ -28,7 +28,7 @@ export default function SearchBar() {
       (landmark) => landmark.name.toLowerCase() === value.toLowerCase()
     );
     if (selectedPlace) {
-      navigate(`/places/id/${selectedPlace.id}`);
+      navigate(`/places/${selectedPlace.id}`);
     }
   };
   return (
