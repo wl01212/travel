@@ -1,0 +1,83 @@
+.fullScreen {
+  height: 90vh;
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0; /* 確保沒有額外的邊距 */
+  padding: 0; /* 確保沒有額外的填充 */
+}
+
+.mapContainer {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  margin: 0; /* 確保沒有額外的邊距 */
+  padding: 0; /* 確保沒有額外的填充 */
+}
+
+.mapCol {
+  flex: 1;
+  display: flex;
+  margin: 0; /* 確保沒有額外的邊距 */
+  padding: 0; /* 確保沒有額外的填充 */
+}
+
+.map {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  margin: 0; /* 確保沒有額外的邊距 */
+  padding: 0; /* 確保沒有額外的填充 */
+}
+.popup {
+  display: flex;
+  flex-direction: column; /* 改為垂直排列 */
+}
+.landmarkName {
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+}
+.img {
+  width: 150px;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column; /* 改為垂直排列 */
+}
+.landmarkName {
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+}
+.img {
+  width: 150px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.buttonHeart {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+@media (max-width: 995px) {
+  .mapContainer {
+    height: 100%;
+    width: 100%;
+  }
+
+  .mapCol {
+    height: 100%;
+    width: 100%;
+  }
+
+  .map {
+    height: 100%;
+    width: 100%;
+  }
+}

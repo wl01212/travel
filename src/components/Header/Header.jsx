@@ -18,17 +18,15 @@ const Header = () => {
       onMouseLeave={() => setIsShrink(true)}
     >
       <div className={styles.logoBox}>
-        <img src={logo} alt="logo" className={styles.logo}  />
+        <img src={logo} alt="logo" className={styles.logo} />
         {!isShrink && <h1 className={styles.title}>Traver</h1>}
-        {!isShrink &&<Divider className={styles.divider} />}
-        
+        {!isShrink && <Divider className={styles.divider} />}
       </div>
-      
-        {/* <SiteList/>
+
+      {/* <SiteList/>
         <FavoriteList/>
     <ScheduleList/>  */}
-        <NavBar  isShrink={isShrink} />
-      
+      <NavBar isShrink={isShrink} />
     </div>
   );
 };
