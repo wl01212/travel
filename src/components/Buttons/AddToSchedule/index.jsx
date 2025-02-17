@@ -3,13 +3,13 @@ import { Button, Modal, notification, Radio, Space } from "antd";
 import styles from "./addToSchedule.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { addScheduleItems } from "../../store/attraction";
+import { addSchedule } from "../../../store/schedule";
 
 export default function AddToSchedule({ landmark }) {
   const [open, setOpen] = useState(false);
   const showModal = () => {
     setOpen(true);
-    console.log("scheduleItem:", scheduleItem);
+    console.log("schedule:", scheduleItem);
   };
   const handleCancel = () => {
     setOpen(false);
@@ -17,10 +17,9 @@ export default function AddToSchedule({ landmark }) {
 
   const [value, setValue] = useState(1);
   const dispatch = useDispatch();
-  const scheduleItem =
-    useSelector((state) => state.schedule.scheduleItems) || [];
+  const scheduleItem = useSelector((state) => state.schedule.schedules) || [];
   const [selectedSchedule, setSelectedSchedule] = useState("");
-
+  console.log(scheduleItem);
   const onChange = (e) => {
     const newSchedule = e.target.value;
     setSelectedSchedule(newSchedule);
@@ -28,8 +27,9 @@ export default function AddToSchedule({ landmark }) {
   };
 
   const handleOk = () => {
+    console.log(landmark);
     if (scheduleItem.length > 0) {
-      addSchedule();
+      addScheduleStore();
     }
     notification.success({
       message: "成功新增景點!",
@@ -37,9 +37,9 @@ export default function AddToSchedule({ landmark }) {
       placement: "top",
     });
   };
-  const addSchedule = () => {
+  const addScheduleStore = () => {
     dispatch(
-      addScheduleItems({
+      addSchedule({
         scheduleName: selectedSchedule,
         landmark: {
           name: landmark.name,

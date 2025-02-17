@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header/Header";
+import Header from "/src/components/Header/Header";
 import { Row, Col } from "antd";
-import styles from "./layout.module.css";
-import SearchBar from "../components/SearchBar";
-import NavigationButton from "../components/NavigationButton/NavigationButton";
+import styles from "./defaultLayout.module.css";
+import SearchBar from "/src/components/SearchBar";
+import NavigationButton from "/src/components/NavigationButton/NavigationButton";
 const Layout = () => {
   // It returns an object with information about the current URL and can also be used to receive the state from a <Link/>.
   return (
@@ -24,7 +24,7 @@ const Layout = () => {
           className={styles.col_16}
         >
           <SearchBar />
-          <NavigationButton /> 
+          <NavigationButton />
           <Outlet />
         </Col>
       </Row>

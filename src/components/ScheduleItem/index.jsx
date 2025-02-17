@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import styles from "./schedule.module.css";
+import Logo from "../../assets/travel.png";
 
 export default function ScheduleItem({ schedule }) {
   const startDate = new Date(schedule.time[0]);

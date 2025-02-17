@@ -3,9 +3,9 @@ import { Row, Col } from "antd";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // 引入 Leaflet 的樣式
 import landmarks from "../../json/place.json";
-import AddToFavorite from "../AddToFavorite";
+import AddToFavorite from "../Buttons/AddToFavorite";
 import CreateScheduleButton from "../ScheduleButton/CreateScheduleButton";
-import AddToSchedule from "../AddToSchedule";
+import AddToSchedule from "../Buttons/AddToSchedule";
 
 export default function MapItem() {
   const center = [36.23541690015412, 137.97220383903155];
