@@ -16,7 +16,7 @@ import rootReducer from "./reducers";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["favorite", "schedule", "attraction"], // 只持久化這些 reducer
+  whitelist: ["favorite", "schedule"], // 只持久化這些 reducer
 };
 
 // 包裝 rootReducer

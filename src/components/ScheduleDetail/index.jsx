@@ -2,17 +2,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import styles from "./schedule.module.css";
-import {
-  selectScheduleName,
-  updateLandmarkOrder,
-} from "../redux/addToSchedule";
+import { updateLandmarkOrder } from "/src/store/schedule.js";
 
 const ScheduleDetail = () => {
   const { scheduleId } = useParams(); // 從路由中獲取行程 ID
-  const schedules = useSelector(selectScheduleName);
+  const schedules = useSelector((store) => store.schedule.schedules);
+  console.log(schedules);
   const dispatch = useDispatch();
   const schedule = schedules.find((s) => s.scheduleId === scheduleId); // 根據 ID 獲取行程
-
+  console.log(scheduleId, schedules);
   //   const startDate = new Date(schedule.time[0]);
   //   const endDate = new Date(schedule.time[1]);
   //   const startTime = `${startDate.getMonth() + 1}/${startDate.getDate()}`;
@@ -40,7 +38,7 @@ const ScheduleDetail = () => {
             {...provided.droppableProps}
             ref={provided.innerRef}
           >
-            {schedule.landmarks.map((landmark, index) => (
+            {schedule.landmarks?.map((landmark, index) => (
               <Draggable
                 key={landmark.id || `${landmark.name}-${index}`}
                 draggableId={

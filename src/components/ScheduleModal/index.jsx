@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal, Form, Input, DatePicker, notification } from "antd";
 import { useDispatch } from "react-redux";
-import { addScheduleItems } from "/src/store/schedule";
+import { addSchedule } from "/src/store/schedule";
 import { v4 } from "uuid";
 
 export default function ScheduleModal({ isOpen, toggleModal }) {
@@ -18,10 +18,11 @@ export default function ScheduleModal({ isOpen, toggleModal }) {
       .validateFields()
       .then((values) => {
         dispatch(
-          addScheduleItems({
+          addSchedule({
             scheduleId: v4(),
             scheduleName: values["schedule name:"],
             time: time,
+            landmarks: [],
           })
         );
         console.log("Form values:", values);

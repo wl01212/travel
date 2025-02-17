@@ -4,7 +4,8 @@ import ScheduleItem from "../ScheduleItem";
 import { useSelector } from "react-redux";
 
 export default function ScheduleList() {
-  const selectSchedule = useSelector((store) => store.attraction) || [];
+  const selectSchedule = useSelector((store) => store.schedule.schedules) || [];
+  console.log(selectSchedule);
   return (
     <>
       <div className={styles.containerbox}>
